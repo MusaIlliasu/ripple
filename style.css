@@ -1,0 +1,51 @@
+* {box-sizing: border-box;scroll-behavior: smooth;}
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    overflow-x: hidden;
+}
+
+section {
+    width: 100vw;
+    height: 100vh;
+    background-color: slateblue;
+    padding-top: 20px;
+}
+section h2 {
+    text-align: center;
+    color: white;
+    margin: 0 0 20px 0;
+}
+
+.image {
+    position: relative;
+    width: 400px;
+    height: 400px;
+    overflow: hidden;
+    margin: 0 auto;
+}
+.image img {width: 100%;height: 100%;object-fit: cover;}
+
+.love_logo {
+    position: absolute;
+    top: -100%;
+    left: -100%;
+    width: 100px;
+    height: 100px;
+    background-color: magenta;
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+    border-bottom-right-radius: 50%;
+    animation: love_scaling 0.5s ease;
+    transform: translate(-50%, -50%) rotate(-40deg) scale(0);
+}
+
+@keyframes love_scaling {
+    to {
+        transform: translate(-50%, -50%) rotate(-40deg) scale(2);
+        opacity: 0;
+    }
+}
